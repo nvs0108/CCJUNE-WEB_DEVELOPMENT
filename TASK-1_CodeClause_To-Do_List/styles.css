@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  background-image: url(to-do.jpg);
+  background-color: #4c7a70;
+  margin: 50px 2%;
+}
+
+/* Container Title */
+.container-title {
+  font-size: 35px;
+  text-align: center;
+  margin: 0 0 30px 0;
+  color: white;
+  text-shadow: 3px 1px black;
+  animation: glowEffect 2s infinite;
+}
+
+@keyframes glowEffect {
+  0% {
+    text-shadow: 3px 1px black;
+  }
+  50% {
+    text-shadow: 0px 0px 10px #8f8acc;
+  }
+  100% {
+    text-shadow: 3px 1px black;
+  }
+}
+
+/* Header */
+header {
+  position: relative;
+}
+
+.container-title {
+  margin-top: 50px;
+}
+
+.header--buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInDown 1s;
+}
+
+.button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0 40px;
+  font-size: 30px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #a5a5aa;
+  color: white;
+  border-radius: 30px;
+}
+
+/* Container */
+.container {
+  position: relative;
+  animation: slideInUp 1s;
+}
+
+.inputcol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.textarea {
+  min-height: 50px;
+  height: 50px;
+  max-width: 90%;
+  min-width: 90%;
+  background-color: lightgray;
+  color: black;
+  border-radius: 10px;
+  border-color: #333;
+  font-size: 20px;
+  padding: 10px 10px;
+  overflow: auto;
+  overflow-x: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #8f8acc;
+  box-shadow: 0 0 10px rgba(143, 138, 204, 0.5);
+}
+
+.buttoninput {
+  border-radius: 10px;
+  border-color: #333;
+  background-color: white;
+  font-size: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buttoninput:hover {
+  background-color: #8f8acc;
+  color: white;
+}
+
+/* To-Do List */
+.todolist {
+  margin-top: 20px;
+  animation: fadeIn 1s;
+  width: 90%;
+  transform: translateX(80px);
+}
+
+.itemall {
+  display: grid;
+  grid-template-columns: 60% 5% 5%;
+  justify-content: center;
+  margin-bottom: 2px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.itemall:hover {
+  transform: scale(1.02);
+}
+
+.item,
+.check-button,
+.trash-button {
+  border: none;
+  background-color: transparent;
+  min-height: 50px;
+  padding: 10px 10px;
+}
+
+.item {
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.item:hover {
+  background-color: #f5f5f5;
+}
+
+.check-button,
+.trash-button {
+  font-size: 15px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.check-button:hover {
+  color: #37b3cc;
+  transform: scale(1.2);
+}
+
+.trash-button:hover {
+  color: #6b73c1;
+  transform: scale(1.2);
+}
+
+.checklist {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.fa-check,
+.fa-trash {
+  pointer-events: none;
+}
+
+button,
+.check-button,
+.trash-button {
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 550;
+  color: var(--darkColor);
+  text-align: center;
+  padding: 15px 0px;
+  animation: fadeIn 1s;
+}
+
+footer a {
+  text-decoration: none;
+  color: beige;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: rgb(217, 255, 0);
+}
+
+/* Animations */
+@keyframes slideInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
